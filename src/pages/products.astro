@@ -1,0 +1,43 @@
+---
+import Filters from "src/components/Filters.astro";
+import ProductGrid from "src/components/ProductGrid.astro";
+import Base from "src/layouts/Base.astro";
+import type { Filter, Product } from "src/types";
+import products from '../data/products.json';
+
+const filter:Filter = 
+{
+    categoryId:""
+};
+
+const productsList:Product[] = products;
+---
+<Base>
+    <div class="container">
+        <aside class="filters">
+          <Filters filter={filter} />
+        </aside>
+        <main class="product-list">
+          <ProductGrid products={productsList} />
+        </main>
+      </div>
+    </Base>
+<style>
+    .container {
+  display: flex; /* Utilizamos Flexbox */
+  height: 100vh; /* Opcional: Para que el contenedor ocupe toda la altura de la pantalla */
+}
+
+.filters {
+  width: 250px; 
+  padding: 20px;
+  border-right: 1px solid #ccc; 
+}
+
+.product-list {
+  flex: 1; 
+  padding: 20px;
+}
+
+
+</style>

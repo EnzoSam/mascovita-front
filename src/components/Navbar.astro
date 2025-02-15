@@ -1,0 +1,70 @@
+---
+import type { Link } from '../types';
+import '../styles/global.css'; // Importa los estilos globales
+
+interface Props {
+  links: Link[];
+}
+
+const { links } = Astro.props as Props;
+---
+
+<nav>
+    <a href="/" class="logo-link">
+      <img src="/images/logo.png" alt="Logo de tu tienda" class="logo">
+    </a>
+    <ul class="nav-links">
+      {links.map((link) => (
+        <li class="nav-item">
+          <a href={link.href} class="nav-link">{link.text}</a>
+        </li>
+      ))}
+    </ul>
+    <button id="theme-toggle" class="theme-button">
+      <i class="fas fa-adjust"></i> {/* Icono de Font Awesome */}
+    </button>
+</nav>
+
+<style>
+
+nav{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.nav-link
+{
+  text-decoration: none;
+  color:  var(--text-color);
+  font-weight: bold;
+}
+
+.logo
+{
+  max-height: 50px;
+  margin-right: 20px
+}
+
+.nav-links
+{
+  display: flex;
+  gap: 20px;
+  flex-grow: 1;
+  list-style: none;
+}
+.nav-item
+{
+
+}
+
+.theme-button
+{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #333;
+}
+
+</style>

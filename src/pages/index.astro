@@ -1,0 +1,28 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Slider from '../components/Slider.astro';
+import ProductCard from '../components/ProductCard.astro';
+import products from '../data/products.json';
+import type { Link, Slide } from '../types';
+import '../styles/global.css';
+import Base from 'src/layouts/Base.astro';
+
+const slides: Slide[] = [] 
+/*[
+  { image: '/images/slide1.jpg', alt: 'Slide 1', caption: '¡Bienvenido a nuestra tienda!' },
+  { image: '/images/slide2.jpg', alt: 'Slide 2', caption: 'Descubre nuestros productos' },
+];*/
+---
+
+<Base>
+  <Slider slides={slides} />
+  <section class="featured-products">
+    <h2>Productos destacados</h2>
+    <div class="product-grid">
+      {products.map((product) => (
+        <ProductCard product={product} />
+      ))}
+    </div>
+  </section>
+</Base>
+

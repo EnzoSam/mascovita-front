@@ -1,0 +1,17 @@
+---
+import type { Slide } from '../types';
+
+interface Props {
+  slides: Slide[];
+}
+const { slides } = Astro.props as Props;
+---
+
+<div class="slider">
+  {slides.map((slide) => (
+    <div class="slide">
+      <img src={slide.image} alt={slide.alt} />
+      <p>{slide.caption}</p>
+    </div>
+  ))}
+</div>

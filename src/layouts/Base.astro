@@ -1,0 +1,25 @@
+---
+import Navbar from '../components/Navbar.astro';
+import type { Link } from '../types';
+import '../styles/global.css';
+
+const navbarLinks: Link[] = [
+  { href: '/', text: 'Inicio' },
+  { href: '/products', text: 'Tienda' },
+  { href: '/contacto', text: 'Contacto' },
+];
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Mascovita</title>
+    <link rel="stylesheet" href="../styles/global.css">
+  </head>
+  <body>
+    <Navbar links={navbarLinks} />
+    <slot />
+    <script src="../scripts/theme.js"></script>
+    <script src="https://kit.fontawesome.com/b7c0074117.js" crossorigin="anonymous"></script>
+  </body>
+</html>

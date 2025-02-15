@@ -1,0 +1,29 @@
+:root {
+    --bg-color: #f8f8f8; /* Blanco para el tema claro */
+    --text-color: #000000; /* Negro para el tema claro */
+    --primary-color: #007bff; /* Azul para el tema claro (ejemplo) */
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+  }
+  
+  /* Estilos para el tema oscuro */
+  body.dark-theme {
+    --bg-color: #121212; /* Gris oscuro para el tema oscuro */
+    --text-color: #ffffff; /* Blanco para el tema oscuro */
+    --primary-color: #00a8ff; /* Azul claro para el tema oscuro (ejemplo) */
+  }
+  
+  .btn {
+    background-color: rgb(255, 187, 0); /* Azul llamativo */
+    color: var(--text-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
