@@ -8,23 +8,25 @@ interface Props {
 const { product } = Astro.props as Props;
 ---
 
-<div class="product-card">
-  <img src={product.image} alt={product.name} class="product-image" />
-  <div class="product-details">
-    <h3 class="product-title">{product.name}</h3>
-    <p class="product-description">{product.description}</p>
-    <p class="product-price">${product.price}</p>
-    <button class="btn">Añadir al carrito</button>
+<a href={`/products/${product.id}`}>
+  <div class="product-card">
+    <img src={product.image} alt={product.name} class="product-image" />
+    <div class="product-details">
+      <h3 class="product-title">{product.name}</h3>
+      <p class="product-description">{product.description}</p>
+      <p class="product-price">${product.price}</p>
+      <button class="btn">Añadir al carrito</button>
+    </div>
   </div>
-</div>
+</a>
 
 <style>
   .product-card {
     border: 1px solid #ccc;
-    border-radius: 8px; 
-    overflow: hidden; 
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
-    transition: transform 0.2s ease-in-out; 
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
   }
 
   .product-card:hover {
