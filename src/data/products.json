@@ -4,13 +4,13 @@
       "name": "Producto 1",
       "description": "Descripción del producto 1",
       "price": 29.99,
-      "image": "https://cdn.pixabay.com/photo/2020/03/28/17/33/lorem-4977985_1280.jpg"
+      "image": "https://catycanar.vtexassets.com/arquivos/ids/170895/ORIGINAL-CRIADORES-DOG-SELECTION-ADULTOS-21kg--1-.png?v=638555360646000000"
     },
     {
       "id": 2,
       "name": "Producto 2",
       "description": "Descripción del producto 2",
       "price": 49.99,
-      "image": "https://cdn.pixabay.com/photo/2020/03/28/17/33/lorem-4977985_1280.jpg"
+      "image": "https://s3-sa-east-1.amazonaws.com/mispichos.com.ar/mp_images/whiskas-gato-bueno-por-naturaleza-salmon_variacion_3442"
     }
   ]
